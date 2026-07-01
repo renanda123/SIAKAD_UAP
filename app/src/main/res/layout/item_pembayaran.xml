@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    style="?attr/materialCardViewStyle"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
+    app:strokeColor="#F1F5F9"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Ikon Finansial di Sisi Kiri -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardIconPembayaran"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            style="?attr/materialCardViewStyle"
+            app:cardBackgroundColor="#F3E8FF"
+            app:cardCornerRadius="10dp"
+            app:strokeWidth="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center"
+                android:src="@android:drawable/ic_menu_report_image"
+                app:tint="@color/primary" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Informasi Detail Tagihan -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="12dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/cardBadgeStatus"
+            app:layout_constraintStart_toEndOf="@id/cardIconPembayaran"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvNamaTagihan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SPP Semester 5"
+                android:textColor="#111827"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvNominalTagihan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Rp3.500.000,00"
+                android:textColor="#4B5563"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Kapsul Badge Status Pembayaran (Pill Shape) -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardBadgeStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?attr/materialCardViewStyle"
+            app:cardBackgroundColor="#DCFCE7"
+            app:cardCornerRadius="12dp"
+            app:strokeWidth="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvStatusPembayaran"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="6dp"
+                android:text="Lunas"
+                android:textColor="#15803D"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

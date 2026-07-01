@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:usesCleartextTraffic="true"
+        android:allowBackup="true"
+        android:icon="@drawable/logo_uap"
+        android:label="SIAKAD UAP"
+        android:roundIcon="@drawable/logo_uap"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SIAKAD_UAP">
+
+        <activity
+            android:name=".activities.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activities.KrsActivity" android:exported="false" />
+        <activity android:name=".activities.KhsActivity" android:exported="false" />
+        <activity android:name=".activities.AbsensiActivity" android:exported="false" />
+        <activity android:name=".activities.PembayaranActivity" android:exported="false" />
+        <activity android:name=".activities.InformasiActivity" android:exported="false" />
+        <activity android:name=".activities.JadwalActivity" android:exported="false" />
+        <activity android:name=".activities.NotifikasiActivity" android:exported="false" />
+        <activity android:name=".activities.ProfilActivity" android:exported="false" />
+
+        <activity
+            android:name=".activities.LoginActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.MainActivity"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

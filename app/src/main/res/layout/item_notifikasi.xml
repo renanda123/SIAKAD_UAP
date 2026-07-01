@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginBottom="6dp"
+    style="?attr/materialCardViewStyle"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="1dp"
+    app:strokeColor="#F1F5F9"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Kapsul Lingkaran Ikon -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardIconNotif"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            style="?attr/materialCardViewStyle"
+            app:cardBackgroundColor="#E0F2FE"
+            app:cardCornerRadius="20dp"
+            app:strokeWidth="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ivIconNotif"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@android:drawable/ic_popup_reminder"
+                app:tint="#0284C7" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Judul Notifikasi -->
+        <TextView
+            android:id="@+id/tvJudulNotif"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="12dp"
+            android:text="KRS Berhasil Disimpan"
+            android:textColor="#111827"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/tvWaktuNotif"
+            app:layout_constraintStart_toEndOf="@id/cardIconNotif"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Detail Isi / Sub-teks Notifikasi -->
+        <TextView
+            android:id="@+id/tvIsiNotif"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Rencana studi semester ini telah divalidasi oleh dosen pembimbing."
+            android:textColor="#6B7280"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/tvJudulNotif"
+            app:layout_constraintStart_toStartOf="@id/tvJudulNotif"
+            app:layout_constraintTop_toBottomOf="@id/tvJudulNotif" />
+
+        <!-- Penunjuk Waktu (Pojok Kanan Atas) -->
+        <TextView
+            android:id="@+id/tvWaktuNotif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Baru saja"
+            android:textColor="#9CA3AF"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Titik Indikator Belum Dibaca (Menggunakan bulatan unread_dot) -->
+        <View
+            android:id="@+id/viewUnreadDot"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/unread_dot"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvWaktuNotif" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
